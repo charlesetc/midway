@@ -3,27 +3,31 @@
 
 <h1><a href = '/'>Themes</a></h1>
 
-#{partial 'nav.toffee'}
+<a href="/">Back</a>
+
+<div class = 'theme' data-theme = 'facebook'>
+<span>Facebook</span>
+<div class = 'theme_image'>
+<img src = '/images/themes/facebook.png'>
+</div>
+</div>
 
 <div class = 'theme' data-theme = 'shadowy'>
-<h2>Shadowy</h2>
-
+<span>Shadowy</span>
 <div class = 'theme_image'>
 <img src = '/images/themes/shadowy.png'>
 </div>
 </div>
 
 <div class = 'theme' data-theme = 'typewriter'>
-<h2>Typewriter</h2>
-
+<span>Typewriter</span>
 <div class = 'theme_image'>
 <img src = '/images/themes/typewriter.png'>
 </div>
 </div>
 
 <div class = 'theme' data-theme = 'alloy'>
-<h2>Alloy</h2>
-
+<span>Alloy</span>
 <div class = 'theme_image'>
 <img src = '/images/themes/alloy.png'>
 </div>

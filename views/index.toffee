@@ -17,7 +17,7 @@
 
 {# if authenticated
       {:
-<input type = 'text' id = 'user_search' autocomplete = 'off' placeholder = 'Query' />
+<input type = 'search' id = 'user_search' autocomplete = 'off' placeholder = 'Query' />
 <section id = 'user_index'>
   {#
   for user in users

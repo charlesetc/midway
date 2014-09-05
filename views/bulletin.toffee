@@ -1,0 +1,10 @@
+
+#{partial 'header.toffee'}
+
+<h1><span>Midway Bulletin</span></h1>
+
+<a href = '/'>Back</a>
+
+<p>Totally awesome.</p>
+
+#{partial 'footer.toffee'}

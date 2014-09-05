@@ -12,17 +12,13 @@ start = (app) ->
 		User.model.findAndLoad {}, (error, users) ->
 			# Remove Current User
 			result.render 'index', {
-				header: 'Midway House',
+				header: 'Midway',
 				users: users
 			}
 
-	app.get '/themes', (request, result) ->
-		result.render 'themes'
-
-	app.post '/set_theme', (request, result) ->
-		result.cookie 'theme', request.body.theme
-		log request.body.theme
-		result.redirect '/themes'
+	app.get "/user/:id", (request, result) ->
+		result.locals.id = request.params.id
+		result.render 'users/profile'
 
 	app.get "/join", (request, result) ->
 		result.render 'users/new', {

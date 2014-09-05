@@ -4,7 +4,7 @@ socket = io()
 $ ->
 
   scroll_message = ->
-    $("#message_index").scrollTop($('#message_index').height() * 2)
+    $("#message_index").scrollTop($('#message_index')[0].scrollHeight * 2)
 
   scroll_message()
 
@@ -25,8 +25,8 @@ $ ->
 
   socket.on "chat message", (message) ->
     if data.sender == message.sender
-      m = "<p class = 'message message_sender'>#{message.message}</p>"
+      m = "<div><p class = 'message message_sender'>#{message.message}</p></div>"
     else
-      m = "<p class = 'message message_receiver'>#{message.message}</p>"
+      m = "<div><p class = 'message message_receiver'>#{message.message}</p></div>"
     $("#message_index").append m
     scroll_message()

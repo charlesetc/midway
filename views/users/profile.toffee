@@ -1,0 +1,10 @@
+
+#{partial '../header.toffee'}
+
+<h1><a href = '/'>Profile</a></h1>
+
+#{partial '../flash.toffee'}
+
+<p>Totally awesome.</p>
+
+#{partial '../footer.toffee'}

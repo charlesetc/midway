@@ -1,40 +1,84 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:100);
 
 *
-	font-family: 'Raleway', sans-serif
-
+	font-family: helvetica, sans-serif
+	font-weight: 100
+light_blue = #dfe3ee
+dark_blue = #3b5998
 a
 	display:inline-block
-	border-radius: 20px
-	border: 1px solid black
+	color: white
+	background: dark_blue
+	border-radius: 4px
+	box-shadow: 0px 0px 10px -4px black
 	padding: 4px 8px
-	color: black
 	text-decoration: none
+	transition: background .3s, color .3s
 
 	&:hover
 		background: rgba(255,255,255,0.7)
+		color: dark_blue
 
 body
 	font-size: 20px
-	background: #eee
-	text-shadow: 10px 16px 10px #666
-	background-image: radial-gradient(#eee, #eee, #eee, #ddd, #bbb, #999, #777)
+	background: light_blue
 	min-height: 100vh
 
 #page
 	width: 60%
 	margin: auto
-	padding-top:100px
+	padding-top: 50px
 
 h1
 	color:black
 	font-size:50px
 	// text-shadow:none
 
+	span
+		position: fixed
+		top: 4px
+		left: 10px
+		z-index: 44
+		color:white
+		font-size: 35px
+		opacity: 1
+		transition: opacity 0.3s, color 0.3s
+
+		&:hover
+			color:black
+			opacity:0.5
+
 	a
 		border: none
-		border-bottom: 1px solid black
+		color: dark_blue
+		border-bottom: 3px solid dark_blue
 		border-radius: 0px
+		background: none
+		box-shadow:none
+
+
+// Nav
+
+#nav
+	position:fixed
+	background: dark_blue
+	left: 0px
+	top:0px
+	box-sizing:border-box
+	width: 100%
+	padding: 8px
+	text-align: right
+	box-shadow: -20px -2px 20px black
+
+	a
+		position:relative
+		top:2px
+		box-shadow:none
+
+		&:hover
+			color: white
+			background: rgba(0,0,0,0.3)
+
 
 
 // Forms
@@ -47,9 +91,9 @@ input
 	background: rgba(0,0,0,0)
 	color:black
 	padding: 4px 8px
-	&:focus
-		box-shadow: 0px 0px 10px -2px black
 
+	&:focus
+		box-shadow: 0px 0px 10px -3px blue
 
 input[type=submit], button
 	margin-top:10px
@@ -65,6 +109,16 @@ input[type=submit], button
 	content: '-- '
 .message_receiver::before
 	content: '>> '
+
+
+#user_search
+	position: fixed
+	width: 30%
+	background: light_blue url('/images/icons/search.png') no-repeat
+	background-position: 7 10
+	background-size: 10px 15px
+	top:3px
+	left:150px
 
 // Flash
 

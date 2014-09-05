@@ -3,6 +3,8 @@
 
 <h1 class = 'chat_data' data-sender = '#{sender.id}' data-receiver = '#{receiver.id}'><a href = '/'>Chat</a></h1>
 
+<a href="/">Back</a>
+
 <p class = 'receiver_notice'>#{ receiver.username }:</p>
 
 
@@ -10,9 +12,9 @@
 {#
 for message in messages
   if message.properties.sender_id.value == Number(sender.id)
-    {: <p class = 'message message_sender'>#{message.properties.content.value}</p> :}
+    {: <div><p class = 'message message_sender'>#{message.properties.content.value}</p></div> :}
   else
-    {: <p class = 'message message_receiver'>#{message.properties.content.value}</p> :}
+    {: <div><p class = 'message message_receiver'>#{message.properties.content.value}</p></div> :}
 
 #}
 </div>

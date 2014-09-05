@@ -1,8 +1,9 @@
-
+<div id = 'nav'>
 {#
   if authenticated
     {:
-      <a href="/user/#{sender.id}">Profile</a>
+      <a href="/user/#{current_user.id}">Profile</a>
+      <a href="/bulletin">Bulletin</a>
       <a href="/themes">Themes</a>
       <a href="/log_out">Log Out</a>
     :}
@@ -13,3 +14,4 @@
       <a href="/log_in">Log In</a>
     :}
 #}
+</div>

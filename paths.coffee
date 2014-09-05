@@ -1,6 +1,7 @@
 
 user_paths = require "./paths/user_paths"
 message_paths = require './paths/message_paths'
+other_paths = require './paths/other_paths'
 bcrypt = require 'bcrypt'
 log = console.log
 
@@ -12,6 +13,7 @@ start = (app) ->
 		unless request.session.authenticated
 			request.session.authenticated = false
 		result.locals.authenticated = request.session.authenticated
+		result.locals.current_user = request.session.user
 		next()
 
 	# Setting Auth_Token
@@ -32,6 +34,7 @@ start = (app) ->
 
 	user_paths.start(app)
 	message_paths.start(app)
+	other_paths.start(app)
 
 
 

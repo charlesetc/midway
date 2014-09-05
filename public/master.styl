@@ -12,6 +12,11 @@ body
 p, a, h1
 	padding: 10px 0px
 
+input
+	outline: none
+	&:focus
+		box-shadow: 0px 0px 10px black
+		
 #page
 	width: 60%
 	margin: auto
@@ -24,12 +29,18 @@ p, a, h1
 	background: url('/images/icons/search.png') no-repeat
 	background-position: 7 10
 	background-size: 10px 15px
+	outline:none
 
-#user_index p
-	display: inline-block
-	padding: 0px
-	padding-right: 8px
-	padding-top: 12px
+#user_index
+
+	div
+		position: relative
+
+	p
+		display: inline-block
+		padding: 0px
+		padding-right: 8px
+		padding-top: 12px
 
 #message_index
 	max-height: 42vh
@@ -37,13 +48,55 @@ p, a, h1
 	padding-bottom: 2vh
 	overflow:scroll
 
+
+line_height = 140px
+box_width = 80%
+
 .theme
 
+	text-align:center
+
+	display: inline-block
+	width: 100%
+	margin-top: 20px
+	cursor: pointer
+	position:relative
+
+
+	& > *
+		display: inline-block
+
 	.theme_image
+		width: box_width
+		max-width: 520px
+		height: line_height
 		border: 1px solid black
 
-	h2
-		font-weight: light
+		img
+			z-index: 1
 
-		&:after
-			content: ':'
+	span
+		text-align:center
+		position: absolute
+		font-size: 50px
+		display: inline-block
+		max-width: 520px
+		width: box_width
+		height: line_height + 2px
+		line-height: line_height + 2px
+		vertical-align: center
+		background: rgba(255,255,255,0.5)
+		opacity: 0
+		color:black
+		font-weight: bold
+		transition: opacity 0.2s
+		z-index: 5
+
+		&:hover
+			opacity: 1
+
+			& ~ div img
+				filter: blur(5px)
+				-o-filter: blur(5px)
+				-moz-filter: blur(5px)
+				-webkit-filter: blur(5px)

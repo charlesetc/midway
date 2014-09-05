@@ -32,7 +32,7 @@ $ ->
       _csrf: AUTH_TOKEN,
       theme: theme
     }, ->
-      location.reload()
+      location.pathname = '/'
 
   $('#user_search').keyup (e) ->
     value = $(this).val()

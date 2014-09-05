@@ -5,7 +5,9 @@
 
 <!-- <script src="//ajax.googleapis.com/ajax/l ibs/jquery/2.1.1/jquery.min.js"></script> -->
 <script src = '/jquery.min.js'></script>
-<script src='/master.js'></script> 
+<script src='/master.js'></script>
+<script src = '/blur.min.js'></script>
+<script src = '/blur_script.js'></script>
 <script src="/socket.io/socket.io.js"></script>
 
 {#
