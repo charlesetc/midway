@@ -1,0 +1,32 @@
+
+#{partial 'header.toffee'}
+
+<h1><span>#{header}</span></h1>
+
+#{partial 'flash.toffee'}
+
+#{partial 'nav.toffee'}
+
+<p>
+  Bulliton Board and Chat for the best UChicago House. <br />
+</p>
+
+<p>
+#MidwayBestWay
+</p>
+
+{# if authenticated
+      {:
+<input type = 'text' id = 'user_search' autocomplete = 'off' placeholder = 'Query' />
+<section id = 'user_index'>
+  {#
+  for user in users
+    {: <p><a href = "/chat/#{user.id}">#{user.properties.username.value}</a></p> :}
+  #}
+
+</section>
+:}
+
+#}
+
+#{partial 'footer.toffee'}

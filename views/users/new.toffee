@@ -1,0 +1,15 @@
+
+#{partial '../header.toffee'}
+
+<h1><a href = '/'>Join</a></h1>
+
+#{partial '../flash.toffee'}
+
+<form action = '/users/new' method = "post">
+	#{raw auth_token_tag}
+	<input type = 'text' name = 'username' placeholder = 'moniker' /><br />
+	<input type = 'password' name = 'password' placeholder = 'password' /><br />
+	<input type = 'submit' />
+</form>
+
+#{partial '../footer.toffee'}

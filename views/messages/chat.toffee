@@ -1,0 +1,28 @@
+
+#{partial '../header.toffee'}
+
+<h1 class = 'chat_data' data-sender = '#{sender.id}' data-receiver = '#{receiver.id}'><a href = '/'>Chat</a></h1>
+
+<p class = 'receiver_notice'>#{ receiver.username }:</p>
+
+
+<div id = 'message_index'>
+{#
+for message in messages
+  if message.properties.sender_id.value == Number(sender.id)
+    {: <p class = 'message message_sender'>#{message.properties.content.value}</p> :}
+  else
+    {: <p class = 'message message_receiver'>#{message.properties.content.value}</p> :}
+
+#}
+</div>
+
+<form method = 'post' action = '/messages/#{receiver.id}/new' id = 'chat_form'>
+  <!-- Not working properly  -->
+
+  #{raw auth_token_tag}
+  <input type = 'text' name = 'content' autocomplete = 'off' id = 'message_content' />
+  <input type = 'submit' />
+</form>
+
+#{partial '../footer.toffee', script: 'chat_io'}

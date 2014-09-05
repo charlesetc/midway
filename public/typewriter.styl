@@ -1,0 +1,112 @@
+
+*
+	font-family: Courier
+
+a
+	display:inline-block
+	padding: 4px 8px
+	color: #4CC
+
+	&:hover
+		background: rgba(255,255,255 0.7)
+
+body
+	font-size: 20px
+	background: #eee
+
+#page
+	width: 60%
+	margin: auto
+	padding-top:100px
+
+h1,h2
+	font-weight: 100
+
+h1
+	color:blue
+	font-size:50px
+	// text-shadow:none
+
+	a
+		border: none
+		border-radius: 0px
+
+
+// Forms
+
+input
+	font-size: 20px
+	margin: 5px 0px
+	border:1px solid #333
+	border-radius: 4px
+	background: white
+	color:black
+	padding: 4px 8px
+
+input[type=submit], button
+	margin-top:10px
+	border-radius: 8px
+	text-align: center
+	padding: 4px 8px
+	border:1px solid #333
+	outline: none
+
+// Messages
+
+.message_sender::before
+	content: '-- '
+.message_receiver::before
+	content: '>> '
+
+// Flash
+
+.flash
+	border: 4px solid black
+	border-radius: 1000
+	-webkit-border-radius: 1000
+	color:white
+	padding:10px
+	margin:10px
+	text-shadow: none
+
+.flash_success
+	border-color: rgba(0,255,0, 1)
+	background:	rgba(0,255,0, 0.3)
+
+.flash_error
+	border-color: rgba(255, 0,0, 1)
+	background: rgba(255, 0,0, 0.3)
+
+// Themes
+
+line_height = 140px
+
+.theme
+	display: inline-block
+	width: 100%
+	margin-top: 20px
+	cursor: pointer
+	position:relative
+
+	&:hover
+		.theme_image
+			opacity: 0.6
+
+	& > *
+		position: relative
+		display: inline-block
+
+	h2
+		vertical-align: top
+		line-height: line_height
+		float: left
+
+	.theme_image
+		border-radius: 20px
+		width: 50%
+		float: right
+		height: line_height
+		overflow:hidden
+		opacity: 1
+		border: 1px solid black
+		transition: opacity 0.3s

@@ -1,0 +1,15 @@
+
+{#
+  if authenticated
+    {:
+      <a href="/user/#{sender.id}">Profile</a>
+      <a href="/themes">Themes</a>
+      <a href="/log_out">Log Out</a>
+    :}
+  else
+    {:
+      <a href="/join">Join</a>
+      <a href="/themes">Themes</a>
+      <a href="/log_in">Log In</a>
+    :}
+#}

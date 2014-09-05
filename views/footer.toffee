@@ -1,0 +1,17 @@
+
+</section>
+
+<div id = 'background'></div>
+
+<!-- <script src="//ajax.googleapis.com/ajax/l ibs/jquery/2.1.1/jquery.min.js"></script> -->
+<script src = '/jquery.min.js'></script>
+<script src='/master.js'></script> 
+<script src="/socket.io/socket.io.js"></script>
+
+{#
+  if typeof(script) != 'undefined'
+    {: <script src = "/#{script}.js" ></script> :}
+#}
+
+</body>
+</html>

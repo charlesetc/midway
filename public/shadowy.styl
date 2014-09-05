@@ -1,0 +1,113 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
+
+*
+	font-family: 'Raleway', sans-serif
+
+a
+	display:inline-block
+	border-radius: 20px
+	border: 1px solid black
+	padding: 4px 8px
+	color: black
+	text-decoration: none
+
+	&:hover
+		background: rgba(255,255,255,0.7)
+
+body
+	font-size: 20px
+	background: #eee
+	text-shadow: 10px 16px 10px #666
+	background-image: radial-gradient(#eee, #eee, #eee, #ddd, #bbb, #999, #777)
+
+#page
+	width: 60%
+	margin: auto
+	padding-top:100px
+
+h1
+	color:black
+	font-size:50px
+	// text-shadow:none
+
+	a
+		border: none
+		border-bottom: 1px solid black
+		border-radius: 0px
+
+
+// Forms
+
+input
+	font-size: 20px
+	margin: 5px 0px
+	border:1px solid #333
+	border-radius: 4px
+	background: rgba(0,0,0,0)
+	color:black
+	padding: 4px 8px
+
+input[type=submit], button
+	margin-top:10px
+	border-radius: 8px
+	text-align: center
+	padding: 4px 8px
+	border:1px solid #333
+	outline: none
+
+// Messages
+
+.message_sender::before
+	content: '-- '
+.message_receiver::before
+	content: '>> '
+
+// Flash
+
+.flash
+	border: 1px solid black
+	border-radius: 1000
+	-webkit-border-radius: 1000
+	color:black
+	padding:10px
+	margin:10px
+
+.flash_success
+	border-color: rgba(0,255,0, 0.8)
+
+.flash_error
+	border-color: rgba(255, 0,0, 0.8)
+
+
+// Themes
+
+line_height = 140px
+
+.theme
+	display: inline-block
+	width: 100%
+	margin-top: 20px
+	cursor: pointer
+	position:relative
+
+	&:hover
+		.theme_image
+			opacity: 0.6
+
+	& > *
+		display: inline-block
+
+	h2
+		vertical-align: top
+		line-height: line_height
+		float: left
+
+	.theme_image
+		border-radius: 20px
+		float: right
+		width: 50%
+		height: line_height
+		overflow:hidden
+		opacity: 1
+		box-shadow: 4px 6px 10px #888
+		transition: opacity 0.3s

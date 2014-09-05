@@ -1,0 +1,7 @@
+
+{#
+if messages.success
+  {: <div class = 'flash flash_success'>#{messages.success[0]}</div> :}
+if messages.error
+  {: <div class = 'flash flash_error'>#{messages.error[0]}</div> :}
+#}

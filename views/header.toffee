@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Express
+	{#
+	if typeof title != 'undefined'
+		print " #{title}"
+	#}</title>
+	<link rel = 'stylesheet' type = 'text/css' href = '/master.css'>
+	<link rel = 'stylesheet' type = 'text/css' href = '/#{theme}.css'>
+	<script type = 'text/javascript'>
+		var AUTH_TOKEN = "#{auth_token}";
+	</script>
+</head>
+
+<body>
+
+
+<section id = 'page'>

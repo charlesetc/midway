@@ -1,0 +1,36 @@
+
+#{partial 'header.toffee'}
+
+<h1><a href = '/'>Themes</a></h1>
+
+#{partial 'nav.toffee'}
+
+<div class = 'theme' data-theme = 'shadowy'>
+<h2>Shadowy</h2>
+
+<div class = 'theme_image'>
+<img src = '/images/themes/shadowy.png'>
+</div>
+</div>
+
+<div class = 'theme' data-theme = 'typewriter'>
+<h2>Typewriter</h2>
+
+<div class = 'theme_image'>
+<img src = '/images/themes/typewriter.png'>
+</div>
+</div>
+
+<div class = 'theme' data-theme = 'alloy'>
+<h2>Alloy</h2>
+
+<div class = 'theme_image'>
+<img src = '/images/themes/alloy.png'>
+</div>
+</div>
+
+<div class = 'theme'>
+
+</div>
+
+#{partial 'footer.toffee'}
